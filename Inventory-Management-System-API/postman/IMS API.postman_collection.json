@@ -1,0 +1,227 @@
+{
+	"info": {
+		"_postman_id": "660bc760-9a17-4aa0-aa84-0f26e4763ea4",
+		"name": "IMS API",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+		"_exporter_id": "42845756"
+	},
+	"item": [
+		{
+			"name": "create",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n  \"name\": \"laptops og\",\r\n  \"description\": \"lenovo slim\",\r\n  \"stock_quantity\": 20,\r\n  \"low_stock_threshold\": 100\r\n}\r\n\r\n",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:7777/api/v1/ims/product/create",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "7777",
+					"path": [
+						"api",
+						"v1",
+						"ims",
+						"product",
+						"create"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "get",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "http://localhost:7777/api/v1/ims/product/c5bd6e8b-c527-4d4e-9956-1c8cfbae00a8",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "7777",
+					"path": [
+						"api",
+						"v1",
+						"ims",
+						"product",
+						"c5bd6e8b-c527-4d4e-9956-1c8cfbae00a8"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "update",
+			"request": {
+				"method": "PUT",
+				"header": [
+					{
+						"key": "Content-Type",
+						"value": "application/json",
+						"type": "text"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n  \"name\": \"updated samsung\",\r\n  \"description\": \"This is a test product samsung s24\",\r\n  \"stock_quantity\": 60,\r\n  \"low_stock_threshold\":70\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:7777/api/v1/ims/product/9884e06f-75fc-4145-9a08-ad2e5e7e8ce0",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "7777",
+					"path": [
+						"api",
+						"v1",
+						"ims",
+						"product",
+						"9884e06f-75fc-4145-9a08-ad2e5e7e8ce0"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "delete",
+			"request": {
+				"method": "DELETE",
+				"header": [],
+				"url": {
+					"raw": "http://localhost:7777/api/v1/ims/product/f5d08ceb-3375-4216-91bb-3ff6a9a20054",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "7777",
+					"path": [
+						"api",
+						"v1",
+						"ims",
+						"product",
+						"f5d08ceb-3375-4216-91bb-3ff6a9a20054"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "increaseQuantity",
+			"request": {
+				"method": "PUT",
+				"header": [
+					{
+						"key": "Content-Type",
+						"value": "",
+						"type": "text"
+					}
+				],
+				"url": {
+					"raw": "http://localhost:7777/api/v1/ims/product/e448adf7-bc96-4202-b4cf-21e1fbffed0c/increaseQuantity?amount=30",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "7777",
+					"path": [
+						"api",
+						"v1",
+						"ims",
+						"product",
+						"e448adf7-bc96-4202-b4cf-21e1fbffed0c",
+						"increaseQuantity"
+					],
+					"query": [
+						{
+							"key": "amount",
+							"value": "30"
+						}
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "decreaseQuantity",
+			"request": {
+				"method": "PUT",
+				"header": [],
+				"url": {
+					"raw": "http://localhost:7777/api/v1/ims/product/9884e06f-75fc-4145-9a08-ad2e5e7e8ce0/decreaseQuantity?amount=10",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "7777",
+					"path": [
+						"api",
+						"v1",
+						"ims",
+						"product",
+						"9884e06f-75fc-4145-9a08-ad2e5e7e8ce0",
+						"decreaseQuantity"
+					],
+					"query": [
+						{
+							"key": "amount",
+							"value": "10"
+						}
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "getAllBelowThreshHold",
+			"protocolProfileBehavior": {
+				"disableBodyPruning": true
+			},
+			"request": {
+				"method": "GET",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:7777/api/v1/ims/product/getAll",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "7777",
+					"path": [
+						"api",
+						"v1",
+						"ims",
+						"product",
+						"getAll"
+					]
+				}
+			},
+			"response": []
+		}
+	]
+}
