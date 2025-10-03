@@ -91,3 +91,6 @@ A backend API to manage products and inventory in a warehouse.
 2. Click **Import** → choose this JSON file.
 3. All endpoints, request bodies, and parameters are pre-configured.
 4. Send requests to test the API locally.
+
+**video explanation link**
+https://www.loom.com/share/583f016b513d46ecbe4f3b74f014d8e4?sid=93caed72-bc7e-43d4-92dd-ffe2fa242e3a 
